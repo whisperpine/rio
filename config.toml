@@ -17,24 +17,18 @@
 # It makes Rio look for the specified theme in the themes folder
 # (macos and linux: ~/.config/rio/themes/dracula.toml)
 # (windows: C:\Users\USER\AppData\Local\rio\themes\dracula.toml)
-#
-# Example:
-# theme = "dracula"
+theme = "yusong"
 
 # Padding-x
 #
 # define x axis padding (default is 0)
-#
-# Example:
-# padding-x = 10
+padding-x = 10
 
 # Padding-y
 #
 # define y axis padding based on a format [top, left]
 # (default is [0, 0])
-#
-# Example:
-# padding-y = [30, 10]
+padding-y = [10, 10]
 
 # Option as Alt
 #
@@ -125,13 +119,13 @@
 # • decorations - Set window decorations, options: "Enabled", "Disabled", "Transparent", "Buttonless"
 #
 # Example:
-# [window]
-# width = 600
-# height = 400
-# mode = "windowed"
-# opacity = 1.0
-# blur = false
-# decorations = "enabled"
+[window]
+width = 800
+height = 600
+mode = "windowed"
+opacity = 1.0
+blur = false
+decorations = "enabled"
 
 # Renderer
 #
@@ -181,43 +175,14 @@
 # will always look for regular font bounds whene
 #
 # You can also set family on root to overwrite all fonts
-# [fonts]
-#   family = "cascadiamono"
-#
-# You can also specify extra fonts to load
-# [fonts]
-# extras = [{ family = "Microsoft JhengHei" }]
-#
-# In case you want to specify any font feature:
-# [fonts]
+[fonts]
+size = 15.5
+family = "Cascadia Mono"
+extras = [{ family = "Microsoft YaHei" }]
 # features = ["ss02", "ss03", "ss05", "ss19"]
-#
-# Note: Font features do not have support to live reload on configuration,
-# so to reflect your changes, you will need to close and reopen Rio.
-#
-# Example:
-# [fonts]
-# size = 18
-#
-# [fonts.regular]
-# family = "cascadiamono"
-# style = "normal"
-# weight = 400
-#
-# [fonts.bold]
-# family = "cascadiamono"
-# style = "normal"
-# weight = 800
-#
-# [fonts.italic]
-# family = "cascadiamono"
-# style = "italic"
-# weight = 400
-#
-# [fonts.bold-italic]
-# family = "cascadiamono"
-# style = "italic"
-# weight = 800
+
+[fonts.bold]
+weight = 400
 
 # Scroll
 #
@@ -266,43 +231,21 @@
 #   - (macOS) user login shell
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#
-# Example 1 using fish shell from bin path:
-#
-# [shell]
-# program = "/bin/fish"
-# args = ["--login"]
-#
-# Example 2 for Windows using powershell
-#
-# [shell]
-# program = "pwsh"
-# args = []
-#
-# Example 3 for Windows using powershell with login
-#
-# [shell]
-# program = "pwsh"
-# args = ["-l"]
-#
-# Example 4 for MacOS with tmux installed by homebrew
-#
-# [shell]
-# program = "/opt/homebrew/bin/tmux"
-# args = ["new-session", "-c", "/var/www"]
+[shell]
+program = "nu"
+args = []
 
 # Colors
 #
 # Colors definition will overwrite any property in theme
 # (considering if theme folder does exists and is being used)
-#
-# Example:
 # [colors]
-# background = '#0F0D0E'
-# foreground = '#F9F4DA'
-# cursor = '#F38BA3'
+# background = '#202020'
+# foreground = '#bdbdbd'
+# cursor = '#bdbdbd'
 # tabs = '#443d40'
 # tabs-active = '#F38BA3'
+# white = '#bdbdbd'
 # green = '#0BA95B'
 # red = '#ED203D'
 # blue = '#12B5E5'
