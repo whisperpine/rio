@@ -3,7 +3,7 @@
 #
 # Default is `false`
 #
-# hide-cursor-when-typing = false
+hide-cursor-when-typing = true
 
 # Ignore theme selection foreground color
 #
@@ -178,11 +178,29 @@ decorations = "enabled"
 [fonts]
 size = 15.5
 family = "Cascadia Mono"
+weight = 600
 extras = [{ family = "Microsoft YaHei" }]
 # features = ["ss02", "ss03", "ss05", "ss19"]
 
+[fonts.regular]
+family = "Cascadia Mono"
+style = "Normal"
+weight = 600
+
 [fonts.bold]
-weight = 400
+family = "Cascadia Mono"
+style = "Normal"
+weight = 600
+
+[fonts.italic]
+family = "Cascadia Mono"
+style = "Normal"
+weight = 600
+
+[fonts.bold-italic]
+family = "Cascadia Mono"
+style = "Normal"
+weight = 600
 
 # Scroll
 #
@@ -215,12 +233,12 @@ weight = 400
 # "color-automation" - Set a specific color for the tab whenever a specific program is running, or in a specific directory.
 #
 # Example:
-# [navigation]
-# mode = "bookmark"
-# clickable = false
-# hide-if-single = true
-# use-current-path = false
-# color-automation = []
+[navigation]
+mode = "Plain"
+clickable = true
+hide-if-single = true
+use-current-path = true
+color-automation = []
 
 # Shell
 #
